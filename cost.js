@@ -1,10 +1,10 @@
 var elements = document.getElementsByClassName("product-tile__active-price-value");
 
 function parse_kg(str) {
-  if (str.includes(" кг")) {
+  if (str.includes(" кг") || str.includes(" л")) {
     return parseFloat(str.match(/\d+/)[0]);
   }
-  if (str.includes(" г")) {
+  if (str.includes(" г") || str.includes(" мл")) {
     return parseFloat(str.match(/\d+/)[0])/1000;
   }
 }
